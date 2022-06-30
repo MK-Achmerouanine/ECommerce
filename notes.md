@@ -31,3 +31,19 @@
     ```bash
     $ python manage.py runserver
     ```
+1. Créer une application django
+    ```bash
+    $ python manage.py startapp <app_name>
+    ```
+1. Créer des migrations django
+    ```bash
+    $ python manage.py makemigrations <app_name> # app_name est optionnel
+    ```
+1. Lancer les migrations
+    ```bash
+    $ python manage.py migrate
+    ```
+1. Créer un super-utilisateur
+    ```bash
+    $ python manage.py createsuperuser
+    ```
