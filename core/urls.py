@@ -14,3 +14,4 @@ urlpatterns = [
     path('logout/', logout_page, name="logout"),
     path('products/', include('apps.products.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
