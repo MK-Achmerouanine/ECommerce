@@ -3,3 +3,4 @@ Pillow
 django-crispy-forms
 django-heroku
 gunicorn
+whitenoise
