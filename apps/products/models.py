@@ -18,6 +18,15 @@ class Product(models.Model):
     image = models.ImageField(_("Image"), upload_to="products", null=True, blank=True)
     category = models.ForeignKey(Category, verbose_name=_("Category"), on_delete=models.SET_NULL, null=True, blank=True) # Or Cascade
 
+    def image_preview(self):
+        from django.utils.html import format_html
+
+        if self.image:
+            return format_html('<img src="{}" alt="{}" height="200" />'.format(self.image.url, self.title))
+        return ""
+    @property
+    def old_price(self):
+        return self.price + 100
     class Meta:
         verbose_name = 'Product'
         verbose_name_plural = 'Products'
