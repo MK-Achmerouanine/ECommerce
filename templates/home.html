@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>majestic | Landing, Ecommerce &amp; Business Templatee</title>
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/img/favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicons/favicon-16x16.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicons/favicon.ico' %}">
+    <link rel="manifest" href="{% static 'assets/img/favicons/manifest.json' %}">
+    <meta name="msapplication-TileImage" content="{% static 'assets/img/favicons/mstile-150x150.png' %}">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet" />
+
+  </head>
+
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      {% include 'includes/navbar.html' %}
+      {% include 'includes/first_section.html' %}
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      {% include 'includes/second_section.html' %}
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+     {% include 'includes/third_section.html' %}
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      {% include 'includes/section_four.html' %}
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+      {% include 'includes/section_five.html' %}
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      {% include 'includes/collections.html' %}
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+     {% include 'includes/best_seller.html' %}
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      {% include 'includes/outlet.html' %}
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      {% include 'includes/explore.html' %}
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      {% include 'includes/blog.html' %}
+      
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+      
+        {% include 'includes/cta.html' %}
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      {% include 'includes/footer.html' %}
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    {% include 'includes/scripts.html' %}
+  </body>
+
+</html>
