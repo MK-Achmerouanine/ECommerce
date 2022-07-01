@@ -1,2 +1,5 @@
 django
 Pillow
+django-crispy-forms
+django-heroku
+gunicorn

@@ -8,6 +8,11 @@
           <li class="nav-item px-2"><a class="nav-link fw-medium" href="#header">Men</a></li>
           <li class="nav-item px-2"><a class="nav-link fw-medium" href="#collection">Collection</a></li>
           <li class="nav-item px-2"><a class="nav-link fw-medium" href="#outlet">Outlet</a></li>
+          {% if request.user.is_authenticated %}<li class="nav-item px-2">
+            <a class="nav-link fw-medium" href="#outlet">{{request.user.username}}</a></li>
+            <a class="nav-link fw-medium" href="/logout/">Logout</a></li> 
+          {% endif %}
+          
         </ul>
         <form class="d-flex"><a class="text-1000" href="#!">
             <svg class="feather feather-phone me-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

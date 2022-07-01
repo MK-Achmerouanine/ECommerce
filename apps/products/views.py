@@ -1,7 +1,8 @@
 from django.shortcuts import redirect, render
 from .forms import ProductForm
 from .models import Product
-
+from django.contrib.auth.decorators import login_required
+from core.decorators import allowed_users
 def product_list(request):
     prds = Product.objects.all()
     context = {
@@ -9,6 +10,7 @@ def product_list(request):
     }
     return render(request, 'products/list.html', context)
 
+@allowed_users(allowed_roles=['Test'])
 def product_details(request, id):
     prd = Product.objects.filter(id=id).first()
     context = {
@@ -26,6 +28,8 @@ d = {
 d['object']['other']['hack']
 d.get('object').get('other').get('hack')
 """
+
+@login_required(login_url="/login")
 def add_product(request):
     form = ProductForm()
     if request.method == 'POST':

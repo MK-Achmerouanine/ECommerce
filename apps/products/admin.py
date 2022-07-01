@@ -1,6 +1,10 @@
 from django.contrib import admin
 from .models import Product, Category
 
+admin.site.site_header = 'Ecommerce'
+admin.site.site_title = "ECommerce Admin Area"
+admin.site.index_title = "Welcome to ECommerce admin area"
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('product_image','title', 'price', 'category')
